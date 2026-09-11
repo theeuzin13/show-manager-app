@@ -1,6 +1,7 @@
-package com.theeuzin.show_manager_app.infrastructure.persistence.entity;
+package com.theeuzin.show_manager_app.infrastructure.persistence.entity.show;
 
 import com.theeuzin.show_manager_app.domain.enums.ShowStatus;
+import com.theeuzin.show_manager_app.infrastructure.persistence.entity.BaseEntity;
 import jakarta.persistence.*;
 import org.hibernate.annotations.SQLDelete;
 import org.hibernate.annotations.SQLRestriction;
