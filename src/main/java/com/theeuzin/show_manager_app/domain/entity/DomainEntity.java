@@ -1,5 +1,8 @@
 package com.theeuzin.show_manager_app.domain.entity;
 
+import java.util.Objects;
+import java.util.UUID;
+
 public abstract class DomainEntity {
 
     protected final UUID id;

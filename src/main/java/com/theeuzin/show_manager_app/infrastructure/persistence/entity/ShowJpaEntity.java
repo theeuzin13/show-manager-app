@@ -5,7 +5,8 @@ import jakarta.persistence.*;
 import org.hibernate.annotations.SQLDelete;
 import org.hibernate.annotations.SQLRestriction;
 
-import java.time.BigDecimal;
+import java.time.LocalDateTime;
+import java.math.BigDecimal;
 
 
 @Entity
@@ -26,7 +27,7 @@ public class ShowJpaEntity extends BaseEntity {
     @Column(nullable = false)
     private LocalDateTime date;
 
-    @Enumerated(EnumType.String)
+    @Enumerated(EnumType.STRING)
     @Column(nullable = false, length = 20)
     private ShowStatus status;
 

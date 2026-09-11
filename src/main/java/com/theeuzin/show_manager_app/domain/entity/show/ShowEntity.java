@@ -1,12 +1,13 @@
-package com.theeuzin.show_manager_app.domain.entity;
+package com.theeuzin.show_manager_app.domain.entity.show;
 
+import com.theeuzin.show_manager_app.domain.entity.DomainEntity;
 import com.theeuzin.show_manager_app.domain.enums.ShowStatus;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.UUID;
 
-public class Show extends DomainEntity {
+public class ShowEntity extends DomainEntity {
 
     private String name;
     private String venue;
@@ -14,7 +15,7 @@ public class Show extends DomainEntity {
     private LocalDateTime date;
     private ShowStatus status;
 
-    public Show(UUID id, String name, String venue, BigDecimal price, LocalDateTime date, ShowStatus status) {
+    public ShowEntity(UUID id, String name, String venue, BigDecimal price, LocalDateTime date, ShowStatus status) {
         super(id);
         validate(name, price, date);
         if (status == null) {
@@ -27,8 +28,8 @@ public class Show extends DomainEntity {
         this.status = status;
     }
 
-    public static Show create(String name, String venue, BigDecimal price, LocalDateTime date) {
-        return new Show(null, name, venue, price, date, ShowStatus.PENDING);
+    public static ShowEntity create(String name, String venue, BigDecimal price, LocalDateTime date) {
+        return new ShowEntity(null, name, venue, price, date, ShowStatus.PENDING);
     }
 
     public void updateDetails(String name, String venue, BigDecimal price, LocalDateTime date) {
